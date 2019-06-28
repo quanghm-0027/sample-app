@@ -1,0 +1,23 @@
+<% provide(:title, t("title.about")) %>
+<h1><%t("title.about")%></h1>
+<p>
+  The
+  <%= link_to("http://www.railstutorial.org/") do %>
+    <em>Ruby on Rails
+      Tutorial</em>
+  <% end %>
+  is a
+  <%= link_to("http://www.railstutorial.org/book") do %>
+    book
+  <% end %>
+  and
+  <%= link_to("http://screencasts.railstutorial.org/") do %>
+    screencast series
+  <% end %>
+  to teach web development with
+  <%= link_to("http://rubyonrails.org/") do %>
+    Ruby on Rails
+  <% end %>
+  This is the sample application for the tutorial.
+</p>
+
