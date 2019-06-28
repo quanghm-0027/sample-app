@@ -32,8 +32,14 @@
 en:
   hello: "Hello world"
   title:
-    home: 'Home'
-    about: 'About'
-    sample: 'Sample App'
-    help: 'Help'
+    home: "Home"
+    about: "About"
+    sample: "Sample App"
+    help: "Help"
     base_title: 'Ruby on Rails Tutorial Sample App'
+  contact: "Contact"
+  signup: "Sign up"
+  signup_now: "Sign up now!"
+  login: "Log in"
+  news: "News"
+  welcome: "Welcome to the Sample App"

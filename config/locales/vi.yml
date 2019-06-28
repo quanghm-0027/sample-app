@@ -1,7 +1,13 @@
 vi:
   title:
-    home: 'Trang chủ'
-    about: 'Giới thiệu'
-    sample: 'Ứng dụng mẫu'
-    help: 'Giúp đỡ'
+    home: "Trang chủ"
+    about: "Giới thiệu"
+    sample: "Ứng dụng mẫu"
+    help: "Giúp đỡ"
     base_title: 'Hướng dẫn ứng dụng Ruby On Rails mẫu'
+  contact: "Liên Hệ"
+  signup: "Đăng Ký"
+  signup_now: "Đăng Ký ngay!"
+  login: "Đăng Nhập"
+  news: "Tin Tức"
+  welcome: "Chào mừng đến với Ứng Dụng"
