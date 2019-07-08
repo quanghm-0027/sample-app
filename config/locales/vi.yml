@@ -11,3 +11,8 @@ vi:
   login: "Đăng Nhập"
   news: "Tin Tức"
   welcome: "Chào mừng đến với Ứng Dụng"
+  name: "Họ và tên"
+  email: "Địa chỉ Email"
+  password: "Mật khẩu"
+  confirmation: "Nhập lại mật khẩu"
+  create: "Tạo mới tài khoản"

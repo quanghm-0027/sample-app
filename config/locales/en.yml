@@ -43,3 +43,8 @@ en:
   login: "Log in"
   news: "News"
   welcome: "Welcome to the Sample App"
+  name: "Name"
+  email: "Email"
+  password: "Password"
+  confirmation: "Confirmation"
+  create: "Create my account"
