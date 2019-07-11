@@ -2,7 +2,12 @@
 
 class ApplicationController < ActionController::Base
   before_action :set_locale
+
+  protect_from_forgery with: :exception
+  include SessionsHelper
+
   private
+
   def set_locale
     locale = params[:locale].to_s.strip.to_sym
     compare_variable = I18n.available_locales.include?(locale)
