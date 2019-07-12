@@ -17,11 +17,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-
     if @user.save
       log_in @user
       flash[:success] = t "welcome"
       redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "pls_check"
+      redirect_to root_url
     else
       render :new
     end
@@ -70,7 +72,7 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_location
-    flash[:danger] = t ""
+    flash[:danger] = t "login_please"
     redirect_to login_url
   end
 
