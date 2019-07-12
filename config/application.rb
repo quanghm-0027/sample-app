@@ -2,6 +2,8 @@ require_relative 'boot'
 
 require 'rails/all'
 
+require 'kaminari'
+
 Bundler.require(*Rails.groups)
 
 module SampleApp
