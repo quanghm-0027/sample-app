@@ -23,3 +23,5 @@ vi:
   settings: "Cài đặt"
   logout: "Đăng xuất"
   account: "Tài khoản"
+  remember: "Ghi nhớ trên máy tính này"
+  not_found_user: "Not Found User"

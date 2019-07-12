@@ -55,3 +55,5 @@ en:
   settings: "Settings"
   logout: "Log Out"
   account: "Account"
+  remember: "Remember me on this computer"
+  not_found_user: "Not Found User"

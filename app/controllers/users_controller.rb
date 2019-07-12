@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: :show
+  before_action :load_user, only: :show
 
   def show; end
 
@@ -11,8 +11,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = t "welcome"
       log_in @user
+      flash[:success] = t "welcome"
       redirect_to user_path(id: @user.id)
     else
       render :new
@@ -26,7 +26,10 @@ class UsersController < ApplicationController
                                  :password_confirmation
   end
 
-  def set_user
-    @user = User.find_by(params[:id])
+  def load_user
+    @user = User.find_by id: params[:id]
+    return @user if @user
+    flash[:danger] = t "not_found_user"
+    redirect_to root_path
   end
 end
