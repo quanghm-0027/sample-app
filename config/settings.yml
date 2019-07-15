@@ -5,3 +5,9 @@ size: 100
 avt_size: 50
 per_page: 15
 expired_limit_hour: 3
+ontent_max: 150
+mic_per_page: 6
+file_size: 6
+content_max: 100
+img_rsize_width: 400
+img_rsize_height: 400

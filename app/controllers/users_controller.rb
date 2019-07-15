@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.page(params[:page]).per Settings.per_page
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.page(params[:page]).per Settings.mic_per_page
+  end
 
   def new
     @user = User.new
@@ -17,12 +19,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
+
     if @user.save
-      log_in @user
-      flash[:success] = t "welcome"
-      redirect_to @user
       @user.send_activation_email
-      flash[:info] = t "pls_check"
+      flash[:info] = t "pls_check
+"
       redirect_to root_url
     else
       render :new
@@ -61,7 +62,7 @@ class UsersController < ApplicationController
 
     return @user if @user
     flash[:warning] = t "not_found_user"
-    redirect_to root_path
+    redirect_to root_url
   end
 
   def correct_user
@@ -72,11 +73,11 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_location
-    flash[:danger] = t "login_please"
+    flash[:danger] = t "login_pls"
     redirect_to login_url
   end
 
   def admin_user
-    redirect_to root_path unless correct_user.admin?
+    redirect_to(root_url) unless current_user.admin?
   end
 end
