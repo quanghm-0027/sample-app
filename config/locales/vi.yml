@@ -69,3 +69,8 @@ vi:
   sure: "Bạn chắc chắn chứ?"
   posted: "Đã đăng"
   ago: "trước."
+  following: "Đang theo dõi"
+  followers: "Người theo dõi"
+  micropost: "Bài viết"
+  unfollow: "Bỏ theo dõi"
+  follow: "Theo dõi"

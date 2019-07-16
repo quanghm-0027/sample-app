@@ -102,3 +102,8 @@ en:
   sure: "Are You sure?"
   posted: "Posted"
   ago: "ago."
+  following: "Following"
+  followers: "Followers"
+  micropost: "Micropost"
+  unfollow: "Unfollow"
+  follow: "Follow"

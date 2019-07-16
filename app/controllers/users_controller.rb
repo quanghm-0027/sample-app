@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: %i(index edit update destroy
+                                         following followers)
   before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :find_user, only: %i(show edit update destroy)
   before_action :correct_user, only: %i(edit update)
@@ -22,8 +24,7 @@ class UsersController < ApplicationController
 
     if @user.save
       @user.send_activation_email
-      flash[:info] = t "pls_check
-"
+      flash[:info] = t "pls_check"
       redirect_to root_url
     else
       render :new
@@ -48,6 +49,20 @@ class UsersController < ApplicationController
       flash[:danger] = t "can_not_delete"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = t "following"
+    @user  = User.find_by id: params[:id]
+    @users = @user.following.page(params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = t "followers"
+    @user  = User.find_by id: params[:id]
+    @users = @user.followers.page(params[:page])
+    render "show_follow"
   end
 
   private
